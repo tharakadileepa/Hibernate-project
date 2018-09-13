@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-30T09:42:52 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="udarabattery" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="372d1efb-ec33-4f35-a47b-6ecfe80cc629">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="UdaraBatterySales"/>
+	<parameter name="date" class="java.sql.Date"/>
+	<queryString language="SQL">
+		<![CDATA[select c.cusname,c.cuscontact,c.cusaddress,o.orddate from customer c inner join buyingorder o on c.cusid = o.cusid
+where o.orddate = $P{date} ]]>
+	</queryString>
+	<field name="cusname" class="java.lang.String"/>
+	<field name="cuscontact" class="java.lang.String"/>
+	<field name="cusaddress" class="java.lang.String"/>
+	<field name="orddate" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="130" y="20" width="270" height="40" uuid="a5be85d4-7fd6-4525-9bb4-49f43811e895"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Customer on Order Date]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="141" height="30" uuid="4d4d7723-8f43-44e8-9e4e-cef1e3726aea"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[cusname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="138" height="30" uuid="1358ca28-e4c4-460a-a24e-4619239840fe"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[cuscontact]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="138" height="30" uuid="30dd6e00-35a1-48e1-ac32-0d9a990483cb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[cusaddress]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="138" height="30" uuid="1c41be45-ccaf-437c-8b83-1f411ad041d1"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[orddate]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="-1" y="10" width="141" height="30" uuid="fd66b701-4112-4b84-aef3-12baaf183721"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cusname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="10" width="138" height="30" uuid="765a1784-50b4-445b-84c3-c0959aa24e55"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cuscontact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="10" width="138" height="30" uuid="c68d7ce8-89e5-42f8-9d3b-7a0149e5368c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cusaddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="10" width="138" height="30" uuid="4f93ecdf-6781-444e-a735-c137fa0099a5"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orddate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

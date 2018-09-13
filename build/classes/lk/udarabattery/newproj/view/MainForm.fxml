@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="424.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.udarabattery.newproj.controller.MainFormController">
+   <children>
+      <Label layoutX="126.0" layoutY="21.0" prefHeight="81.0" prefWidth="514.0" text="Udara Battery Sales" textFill="#0f752c">
+         <font>
+            <Font name="System Bold" size="55.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="81.0" fitWidth="110.0" layoutX="14.0" layoutY="14.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/IMG_5349.JPG" />
+         </image></ImageView>
+      <ImageView fitHeight="424.0" fitWidth="750.0" layoutY="1.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/IMG_5342.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCustomer" fitHeight="150.0" fitWidth="200.0" layoutX="39.0" layoutY="129.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icons8_Customer_50px.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgBattery" fitHeight="150.0" fitWidth="200.0" layoutX="302.0" layoutY="137.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icons8_Car_Battery_48px.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgSale" fitHeight="150.0" fitWidth="200.0" layoutX="545.0" layoutY="119.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icons8_Buying_48px.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblContent" layoutX="228.0" layoutY="321.0" prefHeight="56.0" prefWidth="392.0" textFill="#1b0101">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
